@@ -37,6 +37,10 @@ class BlogResource extends Resource
                     ->image()
                     ->imageEditor()
                     ->preserveFilenames(),
+                Forms\Components\Select::make('categoria_id')
+                    ->label('Categoria')
+                    ->relationship('categoria', 'nome')
+                    ->preload(),
                     
                 RichEditor::make('descricao')
                     ->required()
