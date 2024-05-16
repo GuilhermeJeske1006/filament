@@ -50,7 +50,8 @@ implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->hasPermissionTo('acess_admin');
+        // return $this->hasPermissionTo('acess_admin');
+        return true;
     }
 
 }
