@@ -44,12 +44,7 @@ class UserResource extends Resource
                     ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
 
-                Forms\Components\Select::make('roles')
-                    ->relationship('roles', 'name', fn(Builder $query) => 
-                        auth()->user()->hasRole("Admin") ? null : $query->where('name', '!=', "admin")
-                    )
-                    ->preload()
-                    ->multiple(),
+                
             ]);
     }
 
@@ -93,13 +88,13 @@ class UserResource extends Resource
         ];
     }   
     
-    public static function getEloquentQuery(): Builder
-    {
-        return auth()->user()->hasRole("Admin") 
-        ? parent::getEloquentQuery()
-        : parent::getEloquentQuery()->whereHas(
-            'roles',
-            fn(Builder $query) => $query->where('name', '!=', 'Admin')
-        );
-    }
+    // public static function getEloquentQuery(): Builder
+    // {
+    //     return auth()->user()->hasRole("Admin") 
+    //     ? parent::getEloquentQuery()
+    //     : parent::getEloquentQuery()->whereHas(
+    //         'roles',
+    //         fn(Builder $query) => $query->where('name', '!=', 'Admin')
+    //     );
+    // }
 }

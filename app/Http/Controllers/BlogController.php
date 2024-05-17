@@ -11,10 +11,9 @@ class BlogController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        
+    { 
         return view('Blog.index', [
-            'blogs' => Blog::paginate(15)
+            'blogs' => Blog::simplePaginate(15)
         ]);
 
     }
@@ -25,7 +24,6 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        
         return view('Blog.details', [
             'blog' => $blog
         ]);

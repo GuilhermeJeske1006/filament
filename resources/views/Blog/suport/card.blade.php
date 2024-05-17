@@ -15,7 +15,7 @@
           </div>
 
           <a
-            href="{{ route('blog.show', ['id' => $blog->id]) }}"
+            href="{{ route('blog.show', ['blog' => $blog]) }}"
             class="btn btn-primary py-2 px-3"
             >Ver Detalhes</a
           >
