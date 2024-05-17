@@ -26,9 +26,7 @@
             Nossos profissionais
           </h2>
           <p class="text-black-50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            enim pariatur similique debitis vel nisi qui reprehenderit totam?
-            Quod maiores.
+            Experiência e dedicação: A força por trás do nosso sucesso.
           </p>
         </div>
       </div>

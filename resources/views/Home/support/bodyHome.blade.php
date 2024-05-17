@@ -29,11 +29,11 @@
       <div class="row">
         <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="box-feature">
-            <span class="flaticon-house"></span>
+            <span class="flaticon-house-2"></span>
             <h3 class="mb-3">Assessoria Condominial</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptates, accusamus. Lorem ipsum dolor sit amet
+              Cuidamos do seu condomínio para que você cuide do que realmente
+              importa.
             </p>
             <p><a href="#" class="learn-more">Ver Mais</a></p>
           </div>
@@ -42,10 +42,7 @@
           <div class="box-feature">
             <span class="flaticon-house-3"></span>
             <h3 class="mb-3">Síndico Profissional e Síndico Preposto</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptates, accusamus. 
-            </p>
+            <p>Para uma gestão condominial eficiente</p>
             <p><a href="#" class="learn-more">Ver Mais</a></p>
           </div>
         </div>
@@ -53,17 +50,13 @@
           <div class="box-feature">
             <span class="flaticon-house-1"></span>
             <h3 class="mb-3">Serviços Contábeis Empresárias</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptates, accusamus.Lorem ipsum dolor sit amet
-            </p>
+            <p>Precisão e confiança para a saúde financeira do seu negócio</p>
             <p><a href="#" class="learn-more">Ver Mais</a></p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <div class="section section-4 bg-light">
     <div class="container">
@@ -73,8 +66,8 @@
             Segurança, comodidade e Solução.
           </h2>
           <p class="text-black-50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            enim pariatur similique debitis vel nisi qui reprehenderit.
+            Garantindo tranquilidade e praticidade: Uma abordagem de soluções
+            em segurança e conforto
           </p>
         </div>
       </div>
@@ -90,23 +83,23 @@
               <span class="icon-home2"></span>
             </span>
             <div class="feature-text">
-              <h3 class="heading">Comodidade </h3>
+              <h3 class="heading">Comodidade</h3>
               <p class="text-black-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nostrum iste.
+                Facilitando a vida diária com conveniência e conforto,
+                tornando cada momento mais agradável
               </p>
             </div>
           </div>
 
           <div class="d-flex feature-h">
             <span class="wrap-icon me-3">
-              <span class="icon-person"></span>
+              <span class="icon-gear"></span>
             </span>
             <div class="feature-text">
               <h3 class="heading">Solução</h3>
               <p class="text-black-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nostrum iste.
+                Resolvendo desafios de forma inteligente e eficiente,
+                oferecendo resultados confiáveis e satisfatórios.
               </p>
             </div>
           </div>
@@ -118,12 +111,13 @@
             <div class="feature-text">
               <h3 class="heading">Segurança</h3>
               <p class="text-black-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nostrum iste.
+                Protegendo o que mais importa com tecnologia avançada e
+                medidas preventivas eficazes
               </p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
