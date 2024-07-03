@@ -39,17 +39,10 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('password')
-                    ->label('senha')
+                    ->label('Senha')
                     ->password()
                     ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
-
-                // Forms\Components\Select::make('roles')
-                //     ->relationship('roles', 'name', fn(Builder $query) => 
-                //         auth()->user()->hasRole("Admin") ? null : $query->where('name', '!=', "admin")
-                //     )
-                //     ->preload()
-                //     ->multiple(),
             ]);
     }
 
@@ -58,10 +51,10 @@ class UserResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->label('nome')
+                    ->label('Nome')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->label('email')
+                    ->label('Email')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('criado em')
@@ -93,13 +86,13 @@ class UserResource extends Resource
         ];
     }   
     
-    // public static function getEloquentQuery(): Builder
-    // {
-    //     return auth()->user()->hasRole("Admin") 
-    //     ? parent::getEloquentQuery()
-    //     : parent::getEloquentQuery()->whereHas(
-    //         'roles',
-    //         fn(Builder $query) => $query->where('name', '!=', 'Admin')
-    //     );
-    // }
+    public static function getEloquentQuery(): Builder
+    {
+        return auth()->user()->hasRole("Admin") 
+        ? parent::getEloquentQuery()
+        : parent::getEloquentQuery()->whereHas(
+            'roles',
+            fn(Builder $query) => $query->where('name', '!=', 'Admin')
+        );
+    }
 }
