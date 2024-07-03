@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
     <div class="property-item mb-30">
       <a href="property-single.html" class="img">
-        <img src="{{ $blog->image }}" alt="Image" class="img-fluid" />
+        <img src="{{ asset('storage/'.$blog->image) }}" alt="Image" class="img-fluid" />
       </a>
 
       <div class="property-content">
@@ -15,7 +15,7 @@
           </div>
 
           <a
-            href="{{ route('blog.show', ['id' => $blog->id]) }}"
+            href="{{ route('blog.show', ['blog' => $blog]) }}"
             class="btn btn-primary py-2 px-3"
             >Ver Detalhes</a
           >

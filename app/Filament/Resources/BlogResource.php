@@ -6,6 +6,7 @@ use App\Filament\Resources\BlogResource\Pages;
 use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -24,19 +25,25 @@ class BlogResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image')
+                    ->name('Imagem')
                     ->columnSpanFull()
                     ->image(),
                 Forms\Components\TextInput::make('title')
+                    ->name('Titulo')
                     ->required()
+                    ->columnSpanFull()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('subtitle')
+                    ->name('Subtitulo')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
+                    ->name('Slug')
                     ->maxLength(255),
                 
-                Forms\Components\Textarea::make('description')
-                    ->required()
-                    ->columnSpanFull(),
+                RichEditor::make('description')
+                    ->name('Descrição')
+                    ->columnSpanFull()
+                    ->required(),
             ]);
     }
 
@@ -44,21 +51,17 @@ class BlogResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('image')
+                    ->url(fn ($record) => asset('storage/' . $record->image))
+                    ->circular()
+                    ->label('Imagem'),
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Titulo')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('subtitle')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->label('Criado em')
+                    ->dateTime('d/m/Y H:i'),
+
             ])
             ->filters([
                 //

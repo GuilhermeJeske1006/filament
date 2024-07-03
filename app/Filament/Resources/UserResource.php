@@ -44,12 +44,12 @@ class UserResource extends Resource
                     ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
 
-                Forms\Components\Select::make('roles')
-                    ->relationship('roles', 'name', fn(Builder $query) => 
-                        auth()->user()->hasRole("Admin") ? null : $query->where('name', '!=', "admin")
-                    )
-                    ->preload()
-                    ->multiple(),
+                // Forms\Components\Select::make('roles')
+                //     ->relationship('roles', 'name', fn(Builder $query) => 
+                //         auth()->user()->hasRole("Admin") ? null : $query->where('name', '!=', "admin")
+                //     )
+                //     ->preload()
+                //     ->multiple(),
             ]);
     }
 

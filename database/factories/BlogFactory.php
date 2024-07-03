@@ -20,7 +20,7 @@ class BlogFactory extends Factory
             'title' => $this->faker->title,
             'subtitle' => $this->faker->title,
             'slug' => $this->faker->slug,
-            'image' => $this->faker->imageUrl,
+            'image' => 'NdZ3d84LvfcIVceM9BOWXVjYT1hkOe-metaQ2FwdHVyYSBkZSB0ZWxhIDIwMjMtMTEtMjAgMTUzODM2LnBuZw==-.png', // 'https://via.placeholder.com/1536.png
             'description' => $this->faker->realText,
         ];
     }

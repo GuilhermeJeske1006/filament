@@ -8,8 +8,9 @@
           <div class="row align-items-center">
             <div class="col-lg-6 text-center mx-auto">
               <h2 class="font-weight-bold text-primary heading">
-                Featured Properties
+                Nossas Publicações
               </h2>
+              <p class="text-primary ">Acompanhe as nossas publicações</p>
             </div>
           </div>
         </div>
@@ -23,7 +24,7 @@
             @endforEach
           </div>
           <div class="row align-items-center py-5">
-            <div class="col-lg-3">Pagination (1 of 10)</div>
+            <div class="col-lg-3"></div>
             <div class="col-lg-6 text-center">
                 {{ $blogs->links('') }}
               {{-- <div class="custom-pagination">

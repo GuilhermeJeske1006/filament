@@ -6,31 +6,22 @@
     <div class="section">
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
               <div class="img-property-slide-wrap">
                 <div class="img-property-slide">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid" />
+                  <img src="{{ asset('storage/'.$blog->image) }}" alt="Image" class="img-fluid" />
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <h2 class="heading text-primary">5232 California Ave. 21BC</h2>
-              <p class="meta">California, United States</p>
-              <p class="text-black-50">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
-                laborum quo quos omnis sed magnam id, ducimus saepe, debitis error
-                earum, iste dicta odio est sint dolorem magni animi tenetur.
+            <div class="col-lg-12">
+              <h2 class="heading text-primary">{{ $blog->title }}</h2>
+              <p class="meta">{{ $blog->subtitle }}</p>
+              <p class="mt-5">
+                {!! $blog->description !!}
               </p>
-              <p class="text-black-50">
-                Perferendis eligendi reprehenderit, assumenda molestias nisi eius
-                iste reiciendis porro tenetur in, repudiandae amet libero.
-                Doloremque, reprehenderit cupiditate error laudantium qui, esse
-                quam debitis, eum cumque perferendis, illum harum expedita.
-              </p>
+
   
-              <div class="d-block agent-box p-5">
+              {{-- <div class="d-block agent-box p-5">
                 <div class="img mb-4">
                   <img
                     src="images/person_2-min.jpg"
@@ -60,7 +51,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ class BlogController extends Controller
     {
         
         return view('Blog.index', [
-            'blogs' => Blog::paginate(15)
+            'blogs' => Blog::orderBy('created_at', 'desc')->simplePaginate(15)
         ]);
 
     }
@@ -25,7 +25,6 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        
         return view('Blog.details', [
             'blog' => $blog
         ]);
