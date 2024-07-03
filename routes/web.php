@@ -25,4 +25,5 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{blog}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/orçamento', [BudgetController::class, 'index'])->name('budget');
 
+Route::post('/send/budget', [BudgetController::class, 'send'])->name('budget.send');
 Route::post('/send/contact', [HomeController::class, 'sendEmail'])->name('home.send');

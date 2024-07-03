@@ -11,8 +11,7 @@ class BlogController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        
+    { 
         return view('Blog.index', [
             'blogs' => Blog::orderBy('created_at', 'desc')->simplePaginate(15)
         ]);

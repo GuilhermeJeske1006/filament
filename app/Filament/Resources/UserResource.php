@@ -93,13 +93,13 @@ class UserResource extends Resource
         ];
     }   
     
-    public static function getEloquentQuery(): Builder
-    {
-        return auth()->user()->hasRole("Admin") 
-        ? parent::getEloquentQuery()
-        : parent::getEloquentQuery()->whereHas(
-            'roles',
-            fn(Builder $query) => $query->where('name', '!=', 'Admin')
-        );
-    }
+    // public static function getEloquentQuery(): Builder
+    // {
+    //     return auth()->user()->hasRole("Admin") 
+    //     ? parent::getEloquentQuery()
+    //     : parent::getEloquentQuery()->whereHas(
+    //         'roles',
+    //         fn(Builder $query) => $query->where('name', '!=', 'Admin')
+    //     );
+    // }
 }

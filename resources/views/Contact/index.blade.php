@@ -4,6 +4,17 @@
     
     <div class="section">
         <div class="container">
+          <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-5">
+              <h2 class="font-weight-bold heading text-primary mb-4">
+                Entre em contato conosco
+              </h2>
+              <p class="text-black-50">
+                Suas sugestões e reclamações serão recebidas por nossos
+              gestores e respondidas com brevidade:
+              </p>
+            </div>
+          </div>
           <div class="row">
             <div
               class="col-lg-4 mb-5 mb-lg-0"
